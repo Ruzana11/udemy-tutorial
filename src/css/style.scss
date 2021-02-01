@@ -1,11 +1,11 @@
 /* ===Farben=== */
 
 
-/* 
+/*
 Blau:      #1F4E8C
 Grey:      #3d3f45
 Hell grey: #E5E5E5
-Rot:       #A62C21 
+Rot:       #A62C21
 */
 
 * {
@@ -14,7 +14,7 @@ Rot:       #A62C21
 
 body {
     margin: 0;
-    font-family: "Lato", "Raleway", "Helvetica Neue", "Arial" sans-serif;
+    font-family: "Lato", "Raleway", "Helvetica Neue", "Arial", sans-serif;
     font-size: 16px;
 }
 
@@ -58,7 +58,7 @@ body {
                 text-decoration: none;
             }
             a:hover {
-                text-decoration: underline white 4px;
+                text-decoration: underline ;/*white 4px*/
                 color: #E5E5E5;
             }
             a:visited {
@@ -91,3 +91,18 @@ body {
     background-image: url(../img/hintergrund-klein.jpg);
     background-size: contain;
 }
+/*===Grid System===*/
+.container{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+    background-color: #A62C21;
+
+
+}
+
