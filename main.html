@@ -12,9 +12,9 @@
 
     <!-- Navigationsleiste -->
 
-    <nav class="main-nav">
+    <nav id="main-nav">
 
-        <div class="container desktop-nav">
+        <div class="container" id="desktop-nav">
             <div class="row">
                 <div class="col-6">
                     <a href="main.html">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="container mobile-nav">
+        <div class="container" id="mobile-nav">
             <div class="row">
                 <div class="col-6">
                     <a href="main.html">
@@ -58,6 +58,27 @@
 
     <header class="main-header"></header>
 
+    <!--NEWSLETTER BEREICH-->
+
+    <section class="news-section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <p id="form-text"><span>Melde dich jetzt für den Newsletter an und verpasser nichts mehr!</span> Wir schicken dir nur interessante Informationen!</p>
+                </div>
+                <div class="col-2">
+                    <form id="form" action="main.html" method="post">
+                        <label class="form-label" for="email">E-Mail: </label>
+                        <input class="form-input" id="email" type="email" name="email" placeholder="Deine E-mail Adresse" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Gibt eine gültige E-Mail Adresse an!">
+
+                        <button id="form-button" class="form-button" type="submit">Jetzt anmelden!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <!-- Grid System
     <div class="container border">
         <div class="row">

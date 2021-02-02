@@ -1,0 +1,6 @@
+@mixin button{
+  background-color: $rot;
+  border: 2px solid $rot;
+  color: white;
+  padding: .4rem .6rem;
+}
