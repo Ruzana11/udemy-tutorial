@@ -1,10 +1,11 @@
-/* ===Farben=== */
+/* ===FARBEN=== */
 /*
 Blau:      #1F4E8C
 Grey:      #3d3f45
 Hell grey: #E5E5E5
 Rot:       #A62C21
 */
+/* ===GLOBAL=== */
 * {
   box-sizing: border-box;
 }
@@ -15,7 +16,18 @@ body {
   font-size: 16px;
 }
 
-/* Navigationsleiste */
+/* ===GENERELLES=== */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.activ {
+  background-color: #A62C21 !important;
+}
+
+/* NAVIGATIONSLEISTE */
 .main-nav {
   width: 100%;
   height: 50px;
@@ -73,7 +85,7 @@ body {
   background-color: #A62C21;
 }
 
-/* Navigationsleiste  (Mobile)*/
+/* NAVIGATIONSLEISTE (Mobile)*/
 .mobile-nav-button {
   color: white;
   float: right;
@@ -83,6 +95,7 @@ body {
   height: 37px;
   position: relative;
   margin-top: 0.4rem;
+  margin-bottom: 7px;
 }
 .mobile-nav-button span {
   position: absolute;
@@ -92,12 +105,43 @@ body {
 
 .mobile-nav-content > ul > li {
   display: block;
-  background: #3d3f45;
   height: 50px;
   padding: 0 1.2rem;
+  background-color: #3d3f45;
+  text-align: center;
 }
 
-/* ===Header-Banner=== */
+.mobile-nav-content {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  display: none;
+}
+
+.mobile-nav-dropdowm {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.mobile-nav-dropdowm:hover > .mobile-nav-content {
+  display: block;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+/* ===HEADER BANNER=== */
 .main-header {
   width: 100%;
   height: 0;
@@ -114,7 +158,7 @@ body {
   background-size: contain;
 }
 
-/*===Grid System (Sichtbarkeit)===
+/*===GRID SYSTEM (Sichtbarkeit)===
 
 
 .border, .border *{
@@ -133,7 +177,7 @@ p{
 
 
 */
-/*===Grid System===*/
+/*===GRID SYSTEM===*/
 .container {
   width: 95%;
   margin-left: auto;
