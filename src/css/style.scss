@@ -26,8 +26,8 @@
         box-shadow: 0 0 2px 2px $hellGrey,0 0 10px $hellGrey;
     }
     section{
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     @media (max-width: 1366px) {
@@ -81,6 +81,8 @@
     .activ {
         background-color: $rot!important;
     }
+
+
     /* NAVIGATIONSLEISTE */
 
     #main-nav {
@@ -247,10 +249,17 @@
         height: 30px;
         border: 2px solid white;
         padding: .4rem;
+
     }
     #form-button{
         @include button;
         height: 31px;
+
+
+    }
+    #form-button:hover{
+        border: 2px solid white;
+        transition: border .5s ease-in-out;
     }
 
     @media  (max-width: 1179px){
@@ -286,6 +295,41 @@
         .form-button{
             height: 25px;
 
+        }
+    }
+
+   /* LOGO*/
+
+    @keyframes logoAnimation {
+        0%        {transform: rotateZ(0deg)}
+        11.111%   {transform: rotateZ(0deg)}
+        22.222%   {transform: rotateZ(90deg)}
+        33.333%   {transform: rotateZ(90deg)}
+        44.444%   {transform: rotateZ(180deg)}
+        55.555%   {transform: rotateZ(180deg)}
+        66.666%   {transform: rotateZ(270deg)}
+        77.777%   {transform: rotateZ(270deg)}
+        88.888%   {transform: rotateZ(360deg)}
+        100%   {transform: rotateZ(360deg)}
+
+    }
+    #animiertes-logo{
+        height: 150px;
+        width: 150px;
+        background-color:$grey;
+        border-radius: 50%;
+        margin-right: auto ;
+        margin-left: auto;
+        margin-top: 4rem;
+        padding: 25px ;
+
+        img{
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin-right: auto;
+            margin-left: auto;
+            animation: logoAnimation 5s ease-in-out infinite alternate;
         }
     }
 
@@ -367,6 +411,7 @@
     .leistung-btn{
         text-decoration: none;
         height: 40px;
+        background-color: transparent;
         border: 2px solid white;
         display: inline-block;
         padding-top: .5rem;
@@ -389,8 +434,9 @@
 
     .leistung-btn:hover{
         color: $rot;
-        font-weight: bold;
         border: 2px solid $rot;
+        transition: color .5s ease-in-out, border .5s ease-in-out;
+
     }
 
     @media (max-width: 1366px) {
@@ -507,7 +553,14 @@
         border-radius: 50%;
         margin-left: auto;
         margin-right: auto;
+        transition: transform 1s;
     }
+    .service-icon:hover{
+            transform: rotateZ(360deg);
+
+    }
+
+
     #gunstig-icon{
         background: $grey url("../img/services-sprite.png") 0 0;
     }
@@ -641,35 +694,204 @@
         }
 
     }
+    /*LEISTUNGEN-SEITE*/
+
+    .flex-container{
+        display: flex;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-around;
+        align-items: center;
+        .intro-container{
+            width: 100%;
+
+        }
+    }
+
+    @media (max-width: 1366px) {
+
+        .flex-container{
+            width: 90%;
+        }
+
+    }
+
+    @media (max-width: 1024px) {
+
+        .flex-container{
+            width: 100%;
+            padding-right: 4rem;
+            padding-left: 4rem;
+        }
+
+    }
 
 
+    .leistung-teazer-box{
+        background-color: $grey;
+        flex-basis: 25%;
+        color: white;
+        padding: 2rem 3rem;
+        text-align: center;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style-position: inside;
+            margin-bottom: .4rem;
+        }
+        h1{
+            margin-bottom: 0;
+            margin-top: 2rem;
+        }
+
+    }
+    @media (max-width: 1782px) {
+        .leistung-teazer-box {
+            flex-basis: 27.4%;
+        }
+        .leistungs-box-empfohlen {
+            flex-basis: 30%;
+        }
+
+    }
+
+    @media (max-width: 1622px) {
+        .leistung-teazer-box {
+            flex-basis: 30%;
+        }
+        .leistungs-box-empfohlen {
+            flex-basis: 32.5%;
+        }
+
+    }
+
+    @media (max-width: 1488px) {
+        .leistung-teazer-box {
+            padding: 1rem 2rem;
+        }
+        .flex-container {
+            align-items: stretch;
+        }
+        .leistungs-box-empfohlen {
+            min-height: initial;
+        }
+
+    }
 
 
+ .btn-typ-2 {
+     background-color: #3d3f45;
+     width: 65%;
+     font-size: 1rem;
+     margin-bottom: 2rem;
+     margin-top: .5rem;
+ }
+
+    .btn-typ-2:hover {
+        font-weight: normal;
+    }
+
+ .leistungs-box-empfohlen {
+     flex-basis: 27.5%;
+     min-height: 700px;
+     box-shadow: 0 0 20px 0 $grey;
+    }
+
+    /*KONTAKT SEITE*/
+    #kontakt-formular input,
+    #kontakt-formular textarea{
+        width: 100%;
+        border: 2px solid $grey;
+        font-family: "Lato", "Raleway", "Helvetica Neue", "Arial", sans-serif;
+        padding: .5rem;
+        font-size: 1rem;
+        color: $grey;
+
+    }
+
+    #kontakt-formular input:hover,
+    #kontakt-formular textarea:hover,
+    #kontakt-formular button:hover {
+        border: 2px solid $rot;
+        transition: border .5s ease-in-out;
+
+    }
+
+    @media (max-width: 768px) {
+        #kontakt-formular button{
+          width: 100%;
+        }
+
+    }
+
+    .btn-typ-3{
+        border: 2px solid $grey;
+        background-color: transparent;
+        font-size: 1rem;
+        color: $grey;
+        width: 150px;
+        height: 39px;
+
+    }
+
+    #kontakt-formular{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 4rem;
+
+    }
+
+    @media (max-width: 1366px) {
+
+        #kontakt-formular{
+            width: 90%;
+        }
+
+    }
+
+    @media (max-width: 1024px) {
+
+        #kontakt-formular{
+            width: 100%;
+        }
+
+    }
+
+    /*IMPRESSUM*/
+
+    #impressum a{
+        text-decoration: none;
+        color: $grey;
+        font-weight: bold;
+    }
+
+    /*===GRID SYSTEM (Sichtbarkeit)===
 
 
+    .border, .border *{
+    border: 1px solid #91C4FF
+    }
+    [class*='col-']{
+        background-color: #BFDDFF;
+    }
+    p{
+        background-color: #91C4FF;
+        padding: 0;
+        margin: 0;
+        color: #FFF;
+        text-align: center;
+    }
 
 
-
-
-            /*===GRID SYSTEM (Sichtbarkeit)===
-
-
-            .border, .border *{
-            border: 1px solid #91C4FF
-            }
-            [class*='col-']{
-                background-color: #BFDDFF;
-            }
-            p{
-                background-color: #91C4FF;
-                padding: 0;
-                margin: 0;
-                color: #FFF;
-                text-align: center;
-            }
-
-
-            */
+    */
     /*===GRID SYSTEM===*/
 
     .container{
@@ -747,6 +969,7 @@
             width: 100%;
         }
     }
+
 
 
 
