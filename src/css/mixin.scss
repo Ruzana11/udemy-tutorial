@@ -4,3 +4,11 @@
   color: white;
   padding: .4rem .6rem;
 }
+
+@mixin header{
+  text-align: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2.5rem;
+}

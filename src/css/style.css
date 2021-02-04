@@ -23,6 +23,48 @@ body {
   font-size: 16px;
 }
 
+:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #E5E5E5, 0 0 10px #E5E5E5;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 1366px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .leistungen-box {
+    width: 100%;
+    margin-bottom: 0.6rem;
+  }
+
+  #leistungen-section .row > .col-3:nth-of-type(even) > .leistungen-box {
+    margin-left: 0.5rem;
+  }
+
+  #leistungen-section .row > .col-3:nth-of-type(odd) > .leistungen-box {
+    margin-right: 0.5rem;
+  }
+}
 /* ===GENERELLES=== */
 .clearfix::after {
   content: "";
@@ -90,6 +132,10 @@ body {
 
 .activ {
   background-color: #A62C21;
+}
+
+.logo-link {
+  display: inline-block;
 }
 
 /* NAVIGATIONSLEISTE (Mobile)*/
@@ -169,6 +215,8 @@ body {
 .news-section {
   background-color: #3d3f45;
   width: 100%;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 .news-section p {
   color: white;
@@ -237,11 +285,155 @@ body {
     height: 25px;
   }
 }
-/*@media  (min-width: 1041px){
-    .form-input {
-        width: 50%;
-    }
-}*/
+/*Leistungen-Bereich*/
+.intro-container {
+  text-align: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2.5rem;
+}
+.intro-container h1 {
+  text-transform: uppercase;
+}
+
+@media (max-width: 1366px) {
+  .intro-container {
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  .intro-container {
+    width: 100%;
+  }
+}
+.leistungen-box {
+  background-color: #3d3f45;
+  text-align: center;
+  color: white;
+  padding: 1rem 3rem 2.5rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.6rem;
+}
+.leistungen-box h2 {
+  font-size: 1.2rem;
+}
+.leistungen-box p {
+  font-size: 1rem;
+}
+
+@media (max-width: 1366px) {
+  .leistungen-box p {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .leistungen-box p {
+    margin-bottom: 0;
+  }
+}
+#leistungen-section .row > .col-3:nth-of-type(even) > .leistungen-box {
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+#leistungen-section .row > .col-3:nth-of-type(odd) > .leistungen-box {
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.leistung-btn {
+  text-decoration: none;
+  height: 40px;
+  border: 2px solid white;
+  display: inline-block;
+  padding-top: 0.5rem;
+  width: 40%;
+  min-width: 100px;
+  margin-top: 1rem;
+}
+
+.leistung-btn:link {
+  color: white;
+}
+
+.leistung-btn:active {
+  color: white;
+}
+
+.leistung-btn:visited {
+  color: white;
+}
+
+.leistung-btn:hover {
+  color: #A62C21;
+  font-weight: bold;
+  border: 2px solid #A62C21;
+}
+
+@media (max-width: 1366px) {
+  .leistungen-box {
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .leistungen-box {
+    width: 100%;
+    margin-bottom: 0.6rem;
+  }
+
+  #leistungen-section .row > .col-3:nth-of-type(even) > .leistungen-box {
+    margin-left: 0.5rem;
+  }
+
+  #leistungen-section .row > .col-3:nth-of-type(odd) > .leistungen-box {
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  #leistungen-section .row > .col-3:nth-of-type(even) > .leistungen-box {
+    margin-left: 0;
+  }
+
+  #leistungen-section .row > .col-3:nth-of-type(odd) > .leistungen-box {
+    margin-right: 0;
+  }
+}
+/*VIDEO-BEREICh*/
+#video-section {
+  background-color: #3d3f45;
+  color: white;
+}
+#video-section video {
+  width: 35%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media (max-width: 1440px) {
+  #video-section video {
+    width: 45%;
+  }
+}
+@media (max-width: 1024px) {
+  #video-section video {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  #video-section video {
+    width: 75%;
+  }
+}
+@media (max-width: 480px) {
+  #video-section video {
+    width: 100%;
+  }
+}
 /*===GRID SYSTEM (Sichtbarkeit)===
 
 
