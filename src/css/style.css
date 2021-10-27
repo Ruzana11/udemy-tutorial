@@ -20,7 +20,7 @@ Rot:       #A62C21
 
 body {
   margin: 0;
-  font-family: "Lato", "Raleway", "Helvetica Neue", "Arial", sans-serif;
+  font-family: "Lato", "Raleway", sans-serif;
   font-size: 16px;
 }
 
@@ -645,79 +645,61 @@ section {
   width: 100%;
 }
 
-@media (max-width: 1366px) {
-  .flex-container {
-    width: 90%;
-  }
-}
-@media (max-width: 1024px) {
-  .flex-container {
-    width: 100%;
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }
-}
 .leistung-teazer-box {
   background-color: #3d3f45;
-  flex-basis: 25%;
   color: white;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   text-align: center;
+  width: 320px;
   min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
-.leistung-teazer-box ul {
-  padding: 0;
+  justify-content: space-around;
 }
 .leistung-teazer-box li {
   list-style-position: inside;
   margin-bottom: 0.4rem;
 }
+.leistung-teazer-box ul {
+  padding-inline-start: 0;
+}
 .leistung-teazer-box h1 {
   margin-bottom: 0;
-  margin-top: 2rem;
 }
 
-@media (max-width: 1782px) {
-  .leistung-teazer-box {
-    flex-basis: 27.4%;
-  }
-
-  .leistungs-box-empfohlen {
-    flex-basis: 30%;
-  }
+#leistungs-box-empfohlen {
+  min-height: 400px;
+  width: 330px;
+  box-shadow: 0 0 20px 0 #3d3f45;
+  font-size: 1.1rem;
 }
-@media (max-width: 1622px) {
-  .leistung-teazer-box {
-    flex-basis: 30%;
-  }
 
-  .leistungs-box-empfohlen {
-    flex-basis: 32.5%;
-  }
-}
-@media (max-width: 1488px) {
-  .leistung-teazer-box {
-    padding: 1rem 2rem;
-  }
-
+@media (max-width: 1366px) {
   .flex-container {
-    align-items: stretch;
+    width: 90%;
   }
-
-  .leistungs-box-empfohlen {
-    min-height: initial;
+}
+@media (max-width: 1200px) {
+  .flex-container {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
   }
 }
 .btn-typ-2 {
   background-color: #3d3f45;
-  width: 65%;
+  width: 55%;
   font-size: 1rem;
   margin-bottom: 2rem;
   margin-top: 0.5rem;
+  height: 2.5rem;
+  padding: 0.3rem;
+  color: white;
 }
 
 .btn-typ-2:hover {
